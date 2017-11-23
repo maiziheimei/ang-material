@@ -1,0 +1,231 @@
+<mat-toolbar color="primary">
+  <span>Mockup Design</span>
+  <span class="spacer"></span>
+
+    <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+    </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>description</mat-icon>
+      <span>new</span>
+    </button>
+    <button mat-menu-item>
+    <mat-icon>input</mat-icon>
+    <span>load</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>done</mat-icon>
+      <span>save</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>fingerprint</mat-icon>
+      <span>Login</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>info</mat-icon>
+      <span>info</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+
+<mat-tab-group>
+  <mat-tab label="Start">
+
+    <div class="container color-dark">
+      <div class="col">
+        <p>Readme</p>
+      </div>
+      <div class="col">
+        <p>Please specify your info: </p>
+      </div>
+    </div>
+
+    <div class="container color-light">
+      <div class="col">
+
+        <br><textarea class ="textarea ng-invalid"   name="item" rows="12"  cols="50" placeholder="Wilkommen!
+        Bitte beschreiben Sie Ihre Vision, Mission und strategische Ziele.
+        Phasen:
+        1. Start
+        2. IST-Zustand
+        3. ZIEL-Zustand
+        4. Maßnahmen
+        5. Evaluation" readonly></textarea><br>
+
+        <br><textarea class ="textarea ng-invalid" type="textarea"  name="item" rows="12" cols="50" placeholder="Motivation
+        - Strategische Ausrichtung
+        - Problemlösung
+        - Anstoß durch Messen etc. „Ideengenerierung“)
+        Ergebnisse
+        - Grober IST-Reifegrad („Quick-Check“)
+        - Problembeschreibung
+        - Vorläufige Zieldefinition" readonly></textarea><br>
+
+      </div>
+      <div class="col">
+
+        <br><textarea class ="textarea ng-valid" name="item" rows="5" cols="50" placeholder="Vision ..."></textarea><br>
+
+        <br><textarea class ="textarea ng-valid"  name="item" rows="5" cols="50"
+                      placeholder="Mission ..." [(ngModel)]="missonTextValue" ></textarea><br>
+
+        <br><textarea class ="textarea ng-valid"  name="item" rows="5" cols="50"
+                      placeholder="Strategische Ziele: Lieferfähigkeit erhöhen ..." required></textarea><br>
+
+        <video width="500" height="280" controls>
+          <source src="assets/videos/bear.mp4" type="video/mp4">
+          <source src="assets/videos/bear.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+
+        <form>
+          <input type="submit" class="btn" value="upload your video" >
+        </form>
+
+      </div>
+    </div>
+
+
+  </mat-tab>
+
+  <mat-tab label="IST">
+
+    <table class="t1">
+      <tr>
+        <td> <div> <label>Technologie</label></div></td>
+        <td ><div> <textarea class="cat"rows="2"cols="100" readonly>{{this.modelItem['Kriterium']}}</textarea></div></td>
+        <td><div style="float:right">
+          <mat-form-field>
+            <mat-select placeholder="Choice of Relevant">
+              <mat-option *ngFor="let r of relations" [value]="r.value">
+                {{ r.viewValue }}
+              </mat-option>
+            </mat-select></mat-form-field></div></td>
+      </tr>
+    </table>
+
+    <form >
+    <table class="t1">
+      <tr>
+        <td class="cover"> <textarea class="des" rows="5" cols="50" readonly>{{this.modelItem['Beschreibung']}}</textarea></td>
+        <td class="cover"> <mat-icon >info</mat-icon></td>
+      </tr>
+      <tr class="cover">
+        <td><div class ="justified"><textarea class="note" name="item" rows="5" cols="50" placeholder="Notiz " required></textarea></div></td>
+        <td class="cover"><p></p> </td>
+      </tr>
+      <tr class="cover"><td class="cover"><p></p>
+        <td class="cover"><p></p> </td></tr>
+    </table>
+      <input type="submit" style="visibility: hidden;"/>
+    </form>
+
+<!--the third part-->
+
+
+    <table class="t2" >
+      <tr>
+        <td >
+          <form class="f1">
+            <div> <label>Keine</label></div>
+            <div ><textarea class="aus" readonly>{{this.modelItem['Auspraegung0']}}</textarea></div>
+            <div >
+              <mat-form-field>
+                <mat-select placeholder="Neutral">
+                  <mat-option *ngFor="let r of auspragung" [value]="r.value">
+                    {{ r.viewValue }}
+                  </mat-option>
+                </mat-select></mat-form-field></div>
+            <div><textarea class="notegrey" placeholder="Notiz " required></textarea></div>
+            <input type="submit" style="visibility: hidden;"/>
+          </form>
+        </td>
+
+        <td >
+          <form class="f1">
+            <div> <label>Manuell</label></div>
+            <div ><textarea class="aus" readonly>{{this.modelItem['Auspraegung1']}}</textarea></div>
+            <div >
+              <mat-form-field>
+                <mat-select placeholder="Neutral">
+                  <mat-option *ngFor="let r of auspragung" [value]="r.value">
+                    {{ r.viewValue }}
+                  </mat-option>
+                </mat-select></mat-form-field></div>
+            <div ><textarea class="notegrey"  placeholder="Notiz " required></textarea></div>
+            <input type="submit" style="visibility: hidden;"/>
+          </form>
+        </td>
+
+        <td >
+          <form class="f1">
+            <div> <label>Einfach</label></div>
+            <div ><textarea class="aus" readonly>{{this.modelItem['Auspraegung2']}}</textarea></div>
+            <div >
+              <mat-form-field>
+                <mat-select placeholder="Neutral">
+                  <mat-option *ngFor="let r of auspragung" [value]="r.value">
+                    {{ r.viewValue }}
+                  </mat-option>
+                </mat-select></mat-form-field></div>
+            <div><textarea class="notegrey"  placeholder="Notiz " required></textarea></div>
+            <input type="submit" style="visibility: hidden;"/>
+          </form>
+        </td>
+
+        <td>
+          <form class="f1">
+            <div> <label>Feldbusse</label></div>
+            <div ><textarea class="aus" readonly>{{this.modelItem['Auspraegung3']}}</textarea></div>
+            <div >
+              <mat-form-field>
+                <mat-select placeholder="Neutral">
+                  <mat-option *ngFor="let r of auspragung" [value]="r.value">
+                    {{ r.viewValue }}
+                  </mat-option>
+                </mat-select></mat-form-field></div>
+            <div><textarea class="notegrey" placeholder="Notiz " required></textarea></div>
+            <input type="submit" style="visibility: hidden;"/>
+          </form>
+        </td>
+
+    </tr>
+
+    </table>
+
+
+    <!--<p> testing json data ...</p>-->
+
+      <!--<table>-->
+        <!--<thead>-->
+        <!--<tr *ngFor=" let md of modelData ">-->
+          <!--<td>{{md.ID}}</td>-->
+          <!--<td>{{md.Kriterium}}</td>-->
+          <!--<td>{{md.Beschreibung}}</td>-->
+        <!--</tr>-->
+        <!--</thead>-->
+      <!--</table>-->
+
+    <!--<p> {{modelItem}}</p>-->
+
+    <!--<div class="container" *ngFor="let q of modelItems">-->
+      <!--<h3>{{q?.ID}}</h3>-->
+      <!--<h3>{{q?.Kriterium}}</h3>-->
+      <!--<h3>{{q?.Beschreibung}}</h3>-->
+    <!--</div>-->
+
+    <p> Your typed mission text is:
+      {{this.missonTextValue}}
+    </p>
+
+  </mat-tab>
+
+
+
+  <mat-tab label="ZIELE">ZIELE</mat-tab>
+  <mat-tab label="Maßnahmen">Maßnahmen</mat-tab>
+  <mat-tab label="Evaluation">Evaluation</mat-tab>
+</mat-tab-group>

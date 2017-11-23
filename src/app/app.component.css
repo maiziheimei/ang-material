@@ -1,0 +1,147 @@
+.container {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+.col {
+  padding: .4em 1.3em;
+}
+.color-dark {
+  background: #8c7373;
+}
+.color-light {
+  background: lightgray;
+  opacity: 50;
+}
+
+.textarea.ng-invalid {
+  background-color: rgba(211,211,211, 0.8);
+  width: 80%;
+  resize: both;
+}
+.textarea.ng-valid {
+  background-color: white;
+  width: 80%;
+  resize: both;
+}
+input.btn {
+  border: 0;
+  display:block;
+  padding:1em 3em;
+  background:#8c7373;
+  color:white;
+  margin-bottom:1em;
+  cursor:pointer;
+}
+label {
+  color: #B4886B;
+  border: 2px;
+  font-weight: bold;
+  display: block;
+  width: 250px;
+  margin-left: 30px;
+}
+
+
+table.t1{
+  width: 90%;
+  height: 100px;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 0.05px solid #CCC;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.t2{
+  width: 90%;
+  height: 550px;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 0.05px solid #CCC;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td.cover, tr.cover{
+  background-color: lightblue;
+  border:none;
+}
+
+
+textarea.cat{
+  width: 80%;
+  height: 30px;
+  background-color: lightblue;
+  font-size: large;
+  font-weight: bold;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 0px solid black;
+
+}
+
+textarea.des{
+  width: 100%;
+  height: 100px;
+  background-color: lightblue;
+  font-size: small;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 0px solid black;
+}
+textarea.aus{
+  width: 80%;
+  height: 300px;
+  background-color: lightgray;
+  font-size: small;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 0px solid black;
+}
+textarea.note{
+  width: 80%;
+  height: 100px;
+  background-color: white;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 0px solid black;
+}
+
+textarea.notegrey{
+  width: 80%;
+  height: 100px;
+  background-color: lightgrey;
+  font-size: small;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 0px solid black;
+}
+
+div.justified {
+  display: flex;
+  justify-content: center;
+}
+
+div.select {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+form.f1 {
+  margin-left: 25px;
+  padding: 0;
+}
+
+.mat-tab-label {
+  min-width: 1px !important;
+  font-size: xx-large;
+  font-weight: bold;
+  background-color: cadetblue;
+}
