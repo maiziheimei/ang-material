@@ -4,6 +4,7 @@ import {Http} from '@angular/http';
 // import 'rxjs/add/operator/filter';
 import 'rxjs/Rx';
 import { Model} from "../interface/Model";
+import 'rxjs/add/observable/bindCallback';
 
 @Component({
   selector: 'app-root',
